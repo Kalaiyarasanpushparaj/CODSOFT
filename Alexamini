@@ -1,0 +1,32 @@
+def alexamini_response(user_input):
+    user_input = user_input.lower()
+
+    if "hello" in user_input or "hi" in user_input:
+        return "Hello! How can I help you today?"
+    elif "how are you" in user_input:
+        return "I'm just a bot, but I'm doing great! How about you?"
+    elif "what is your name" in user_input:
+        return "I am a Alexa mini created to assist you with your queries."
+    elif "bye" in user_input or "goodbye" in user_input:
+        return "Goodbye! Have a nice day!"
+    elif "help" in user_input:
+        return "Sure! I can assist you with various tasks. How can I help you?"
+    elif "what is ai" in user_input:
+        return "Artificial intelligence, or AI, is technology that enables computers and machines to simulate human intelligence and problem-solving capabilities."
+    elif "what are the domains of ai" in user_input:
+        return "Machine Learning, Deep Learning, Natural Language Processing, Computer Vision, and Data Science "
+        
+    else:
+        return "I'm sorry, I don't understand that. Can you please rephrase?"
+
+def main():
+    print("Alexa mini: Hello! Type 'bye' to exit.")
+    while True:
+        user_input = input("You: ")
+        response = alexamini_response(user_input)
+        print(f"Alexa mini: {response}")
+        if "bye" in user_input.lower():
+            break
+
+if __name__ == "__main__":
+    main()
